@@ -6,27 +6,20 @@
   box-sizing: border-box;
 }
 
-li {
+a {
+  text-decoration: none;
+  color: black;
+}
+
+ul {
   list-style-type: none;
 }
 
-a {
-  text-decoration: none;
-}
-
-/***********************************************************/
-/********************* Header ******************************/
-/***********************************************************/
 header {
   text-align: center;
 }
-
-#logo img {
-  width: 160px;
-}
-
-#logo {
-  margin: 10px;
+header h1 {
+  font-family: "shrikhand";
 }
 
 .maps {
@@ -40,13 +33,12 @@ header {
 }
 
 .text_maps {
-  background-color: #f3f0f0;
+  background-color: #f6f6f6;
 }
-.text_maps h1 {
+.text_maps h2 {
   font-family: "Roboto", sans-serif;
   font-weight: bold;
   font-size: 1.5rem;
-  padding: 1rem;
 }
 .text_maps p {
   font-size: 1.2rem;
@@ -64,10 +56,180 @@ button {
   background: -moz-linear-gradient(top, #FF79DA 0%, #FF79DA 39%, #9356DC 100%);
   background: -webkit-linear-gradient(top, #FF79DA 0%, #FF79DA 39%, #9356DC 100%);
   background: linear-gradient(to bottom, #FF79DA 0%, #FF79DA 39%, #9356DC 100%);
+  box-shadow: #00000078 2px 5px 10px 0px;
 }
 
 button:hover {
   transform: scale(1.04);
+}
+
+nav {
+  margin: 25px;
+}
+nav ul {
+  padding: 1.7rem;
+  gap: 2.5rem;
+  display: flex;
+}
+@media (max-width: 908px) {
+  nav ul {
+    flex-direction: column;
+  }
+}
+nav li {
+  background-color: #f6f6f6;
+  padding: 1rem;
+  border-radius: 28px;
+  flex-grow: 1;
+  box-shadow: #00000078 2px 5px 10px 0px;
+}
+nav li :hover {
+  transform: scale(1.04);
+}
+nav li i.fas {
+  margin-right: 1.5rem;
+}
+nav li:hover {
+  background-color: #9256dc1c;
+}
+nav span {
+  display: inline-block;
+  height: 45px;
+  width: 42px;
+  text-align: center;
+  position: relative;
+  margin-left: -35px;
+  margin-right: 15px;
+  padding: 15px;
+  background-color: #9356DC;
+  border-radius: 50%;
+  color: white;
+}
+
+main {
+  background: #f6f6f6;
+  padding: 1rem;
+}
+main h2 {
+  margin: 0.8rem;
+}
+
+.containerRestaurants {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(2, 2fr);
+}
+@media (max-width: 768px) {
+  .containerRestaurants {
+    display: flex;
+    flex-direction: column;
+  }
+}
+.containerRestaurants img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 15px 15px 0 0;
+}
+.containerRestaurants figure {
+  background-color: white;
+  border-radius: 15px;
+}
+.containerRestaurants figcaption {
+  padding: 15px;
+  position: relative;
+}
+.containerRestaurants a {
+  margin: 5px;
+}
+.containerRestaurants i {
+  font-size: 2rem;
+  position: absolute;
+  right: 1rem;
+  top: 15%;
+}
+
+footer {
+  background: #353535;
+  color: white;
+  padding: 1rem 2rem;
+}
+footer h2 {
+  font-family: "shrikhand";
+  font-weight: 500;
+  padding: 1rem 0;
+}
+footer p {
+  padding: 0.3rem;
+}
+footer i {
+  margin-right: 0.5rem;
+}
+
+.paletteDuGout__main {
+  border-radius: 2rem 2rem 0 0;
+  margin-top: -77px;
+  position: relative;
+}
+.paletteDuGout__main h2 {
+  font-family: "shrikhand", "sans-serif";
+}
+
+.presentation_pic img {
+  width: 100%;
+  height: 50vh;
+  object-fit: cover;
+  display: block;
+  position: relative;
+}
+
+.menu {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  overflow: hidden;
+  white-space: nowrap;
+}
+@media (max-width: 1084px) {
+  .menu {
+    display: flex;
+    flex-direction: column;
+  }
+}
+.menu .container_dish {
+  background: white;
+  border-radius: 1rem;
+  padding: 0.8rem;
+  margin: 1rem;
+  display: flex;
+}
+.menu .container_dish .dish_icon {
+  background: #99E2D0;
+  margin-right: 5px;
+}
+.menu .container_dish .price {
+  margin-left: auto;
+}
+.menu .container_entree h3, .menu .container_plat h3, .menu .container_dessert h3 {
+  margin-left: 1.2rem;
+}
+
+.command {
+  text-align: center;
+}
+
+button {
+  color: white;
+  font-size: 1.5rem;
+  background: #FF79DA;
+  margin: 2rem 0 3.5rem 0;
+  padding: 1.2rem 2.5rem;
+  border: none;
+  border-radius: 35px;
+  transition: transform 300ms;
+  background: -moz-linear-gradient(top, #FF79DA 0%, #FF79DA 39%, #9356DC 100%);
+  background: -webkit-linear-gradient(top, #FF79DA 0%, #FF79DA 39%, #9356DC 100%);
+  background: linear-gradient(to bottom, #FF79DA 0%, #FF79DA 39%, #9356DC 100%);
+  box-shadow: #00000078 2px 5px 10px 0px;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -1,0 +1,45 @@
+@import "../utils/zoom_in.scss";
+
+nav{
+    margin: 25px;
+    
+    ul{
+        padding: 1.7rem;
+        gap: 2.5rem;
+        display: flex;
+        @media (max-width:908px) {
+            flex-direction: column
+        }
+    }
+    li{
+        background-color: #f6f6f6;
+        padding: 1rem;
+        border-radius: 28px;
+        flex-grow: 1;
+
+        @include box-shadow;
+        :hover {
+            @include zoom_in;
+        }
+        i.fas {
+            margin-right: 1.5rem;
+        }
+    }
+    li:hover{
+        background-color: #9256dc1c;
+    }
+    span{
+        display: inline-block;
+        height: 45px;
+        width: 42px;
+        text-align: center;
+        position: relative;
+        margin-left: -35px;
+        margin-right: 15px;
+        padding: 15px;
+        background-color: $purple;
+        border-radius: 50%;
+        color: white;
+    }
+}
+

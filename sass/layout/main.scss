@@ -9,7 +9,7 @@ main
 
 .containerRestaurants{
     display: grid;
-    gap: 1rem;
+    gap: 1.5rem;
     grid-template-columns: repeat(2, 2fr);
     
     @media (max-width:768px) {
@@ -46,8 +46,12 @@ main
     }
 }
 
-a {
+figure {
     margin: 5px;
+    @include box-shadow;
+    &:hover {
+        @include zoom_in;
+    }
     i {
         position: absolute;
         font-size: 2rem;
@@ -55,6 +59,7 @@ a {
         top: 15%;
        
     }
+    
     .fas {
         color: transparent;
         background: #9356DC;
@@ -68,6 +73,6 @@ a {
     }
     &:hover .fas {
         opacity: 1;
-        transform:translateY(-5%) scale(1.2) ;
+        transform:translateY(-5%) scale(1.2);
     }
 }

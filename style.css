@@ -15,11 +15,32 @@ ul {
   list-style-type: none;
 }
 
-body p, body h2, body h3, body h4 {
+body p, body h2, body h3, body h4, body .price {
   font-family: "Roboto", sans-serif;
 }
 body h1 {
   font-family: "Shrikhand", cursive;
+}
+
+.loader {
+  height: 100vh;
+  display: grid;
+  place-items: center;
+  background: #99E2D0;
+  opacity: 0.8;
+  position: fixed;
+  inset: 0;
+  z-index: 1;
+  animation: vanish 200ms 3s;
+  animation-fill-mode: forwards;
+}
+.loader::after {
+  content: "Ohmyfood";
+  color: #9356DC;
+  border-bottom: 4px solid #FF79DA;
+  font-family: shrikhand;
+  font-size: 70px;
+  animation: shake 3s infinite linear;
 }
 
 header {
@@ -50,8 +71,7 @@ header h1 {
 .text_maps p {
   font-size: 1.2rem;
 }
-
-button {
+.text_maps button {
   color: white;
   font-size: 1.5rem;
   background: #FF79DA;
@@ -65,8 +85,7 @@ button {
   background: linear-gradient(to bottom, #FF79DA 0%, #FF79DA 39%, #9356DC 100%);
   box-shadow: #00000078 2px 5px 10px 0px;
 }
-
-button:hover {
+.text_maps button:hover {
   transform: scale(1.04);
 }
 
@@ -123,7 +142,7 @@ main h2 {
 
 .containerRestaurants {
   display: grid;
-  gap: 1rem;
+  gap: 1.5rem;
   grid-template-columns: repeat(2, 2fr);
 }
 @media (max-width: 768px) {
@@ -160,16 +179,20 @@ main h2 {
   right: 1.3rem;
 }
 
-a {
+figure {
   margin: 5px;
+  box-shadow: #00000078 2px 5px 10px 0px;
 }
-a i {
+figure:hover {
+  transform: scale(1.04);
+}
+figure i {
   position: absolute;
   font-size: 2rem;
   right: 1rem;
   top: 15%;
 }
-a .fas {
+figure .fas {
   color: transparent;
   background: #9356DC;
   background: -moz-linear-gradient(top, #9356DC 0%, #FF79DA 85%, #FF79DA 100%);
@@ -180,7 +203,7 @@ a .fas {
   transition: 900ms ease-in;
   -webkit-background-clip: text;
 }
-a:hover .fas {
+figure:hover .fas {
   opacity: 1;
   transform: translateY(-5%) scale(1.2);
 }
@@ -198,28 +221,30 @@ footer h2 {
 footer p {
   padding: 0.3rem;
 }
-footer i {
-  margin-right: 0.5rem;
+footer div {
+  display: flex;
+  align-items: center;
+  margin-left: 0.2rem;
 }
 
-@keyframes rotation {
-  0% {
-    transform: rotate(-350deg);
-  }
-  100% {
-    transform: rotate(0);
-  }
-}
 .all {
   border-radius: 2rem 2rem 0 0;
   margin-top: -77px;
   position: relative;
 }
-.all h2 {
-  font-family: "shrikhand", "sans-serif";
+
+.top {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5rem;
 }
-.all h3 {
-  font-weight: 400;
+.top i {
+  color: #99E2D0;
+}
+.top i:hover {
+  transform: scale(1.04);
+  transform: scale(1.2);
 }
 
 .title {
@@ -234,7 +259,6 @@ footer i {
 }
 .title .fas {
   color: transparent;
-  background: #9356DC;
   background: -moz-linear-gradient(top, #9356DC 0%, #FF79DA 85%, #FF79DA 100%);
   background: -webkit-linear-gradient(top, #9356DC 0%, #FF79DA 85%, #FF79DA 100%);
   background: linear-gradient(to bottom, #9356DC 0%, #FF79DA 85%, #FF79DA 100%);
@@ -245,7 +269,7 @@ footer i {
 }
 .title:hover .fas {
   opacity: 1;
-  transform: translateY(-5%) scale(1.2);
+  transform: translateY(-5%) scale(1.5);
 }
 
 .presentation_pic img {
@@ -279,6 +303,12 @@ footer i {
   display: flex;
   overflow: hidden;
   box-shadow: #00000078 2px 5px 10px 0px;
+}
+.menu .container_dish:hover .dish_icon {
+  margin-right: 0;
+}
+.menu .container_dish:hover i {
+  animation: rotation 1s ease;
 }
 .menu .container_dish .dish {
   padding: 0.8rem;
@@ -317,20 +347,17 @@ footer i {
   padding: 0.4rem;
   color: #99E2D0;
 }
-
-.container_dish:hover .dish_icon {
-  margin-right: 0;
-}
-.container_dish:hover i {
-  animation: rotation 1s ease;
-}
-
-.container_entree h3, .container_plat h3, .container_dessert h3 {
+.menu h3 {
   margin-left: 1.2rem;
 }
-
-.command {
-  text-align: center;
+.menu .container_entree {
+  animation: appearance 1s;
+}
+.menu .container_plat {
+  animation: appearance 2s;
+}
+.menu .container_dessert {
+  animation: appearance 3s;
 }
 
 button {
@@ -338,7 +365,7 @@ button {
   font-size: 1.5rem;
   background: #FF79DA;
   margin: 2rem 0 3.5rem 0;
-  padding: 1.2rem 2.5rem;
+  padding: 1rem;
   border: none;
   border-radius: 35px;
   transition: transform 300ms;
@@ -346,6 +373,59 @@ button {
   background: -webkit-linear-gradient(top, #FF79DA 0%, #FF79DA 39%, #9356DC 100%);
   background: linear-gradient(to bottom, #FF79DA 0%, #FF79DA 39%, #9356DC 100%);
   box-shadow: #00000078 2px 5px 10px 0px;
+}
+button:hover {
+  transform: scale(1.04);
+}
+
+.command {
+  text-align: center;
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(-350deg);
+  }
+  100% {
+    transform: rotate(0);
+  }
+}
+@keyframes appearance {
+  0% {
+    opacity: 0;
+    transform: rotateX(-100deg);
+    transform-origin: top;
+  }
+  100% {
+    opacity: 1;
+    transform: rotateX(0deg);
+    transform-origin: top;
+  }
+}
+@keyframes vanish {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+@keyframes shake {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  10%, 30%, 50%, 70% {
+    transform: translateX(-10px);
+  }
+  20%, 40%, 60% {
+    transform: translateX(10px);
+  }
+  80% {
+    transform: translateX(8px);
+  }
+  90% {
+    transform: translateX(-8px);
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

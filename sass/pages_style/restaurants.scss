@@ -1,18 +1,25 @@
-@import "../utils/animations.scss";
-
 .all {
     border-radius: 2rem 2rem 0 0;
     margin-top: -77px;
     position: relative;
-
-    h2 {
-        font-family: "shrikhand", "sans-serif";
-    }
-    h3 {
-        font-weight: 400;
-    }
 }
 
+.top 
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+
+    i {
+        color: $green;
+        &:hover {
+            @include zoom_in;
+            transform: scale(1.2);
+        }
+    }
+}
+   
 .title 
 {
     display: flex;
@@ -28,7 +35,6 @@
     }
     .fas {
         color: transparent;
-        background: #9356DC;
         background: -moz-linear-gradient(top, #9356DC 0%, #FF79DA 85%, #FF79DA 100%);
         background: -webkit-linear-gradient(top, #9356DC 0%, #FF79DA 85%, #FF79DA 100%);
         background: linear-gradient(to bottom, #9356DC 0%, #FF79DA 85%, #FF79DA 100%);
@@ -39,7 +45,7 @@
     }
     &:hover .fas {
         opacity: 1;
-        transform:translateY(-5%) scale(1.2) ;
+        transform:translateY(-5%) scale(1.5);
     }
     
 }
@@ -78,6 +84,15 @@
         display: flex;
         overflow: hidden;
         @include box-shadow;
+        &:hover {
+            .dish_icon {
+                margin-right: 0;
+            }
+            
+            i {
+                animation: rotation 1s ease;
+            }
+        }
        
         .dish {
             padding: 0.8rem;
@@ -89,7 +104,7 @@
             white-space: nowrap;
             text-overflow: ellipsis;   
         }
-
+        
         p {
             overflow: hidden;
             white-space: nowrap;
@@ -121,41 +136,35 @@
             border-radius: 50%;
             padding: 0.4rem;
             color: $green;
-        }
-        
-    }  
+        }  
+    }
+    
+    h3 {
+        margin-left: 1.2rem;
+    }
+    .container_entree
+    {
+        animation: appearance 1s;
+    }
+    .container_plat
+    {
+        animation: appearance 2s;
+    }
+    .container_dessert
+    {
+        animation: appearance 3s;
+    }
 }
 
-.container_dish:hover {
-    .dish_icon {
-    margin-right: 0;
-}
-i {
-    animation: rotation 1s ease;
-}
-}   
-
-.container_entree h3, .container_plat h3, .container_dessert h3 {
-    margin-left: 1.2rem;
+button 
+{
+    @include button_style;
 }
 
 .command
 {
     text-align: center;
 }
-button
-{
-    color: white;
-    font-size: 1.5rem;
-    background: #FF79DA;
-    margin: 2rem 0 3.5rem 0;
-    padding: 1.2rem 2.5rem;
-    border: none;
-    border-radius: 35px;
-    transition: transform 300ms;
-    background: -moz-linear-gradient(top, #FF79DA 0%, #FF79DA 39%, #9356DC 100%);
-    background: -webkit-linear-gradient(top, #FF79DA 0%, #FF79DA 39%, #9356DC 100%);
-    background: linear-gradient(to bottom, #FF79DA 0%, #FF79DA 39%, #9356DC 100%);
-    @include box-shadow;
-}
+
+
 

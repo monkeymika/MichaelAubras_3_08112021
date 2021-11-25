@@ -1,5 +1,3 @@
-@import "../utils/box-shadows";
-
 header
 {
     text-align: center;
@@ -30,25 +28,11 @@ header
     p{
         font-size: 1.2rem;
     }
+    button {
+        @include button_style;
+    }
 }
 
-button
-{
-    color: white;
-    font-size: 1.5rem;
-    background: #FF79DA;
-    margin: 2rem 0 3.5rem 0;
-    padding: 1rem;
-    border: none;
-    border-radius: 35px;
-    transition: transform 300ms;
-    background: -moz-linear-gradient(top, #FF79DA 0%, #FF79DA 39%, #9356DC 100%);
-    background: -webkit-linear-gradient(top, #FF79DA 0%, #FF79DA 39%, #9356DC 100%);
-    background: linear-gradient(to bottom, #FF79DA 0%, #FF79DA 39%, #9356DC 100%);
-    @include box-shadow;
-}
 
-button:hover
-{
-    transform: scale(1.04);
-}
+
+

@@ -24,10 +24,34 @@ ul
 }
 
 body {
-    p, h2, h3, h4 {
+    p, h2, h3, h4, .price {
         font-family: 'Roboto', sans-serif;
     }
     h1 {
         font-family: 'Shrikhand', cursive;
     }
 }
+
+.loader {
+    $animation-duration: 3s;
+    height: 100vh;
+    display: grid;
+    place-items: center;
+    background: $green;
+    opacity: 0.8;
+    position: fixed;
+    inset: 0;
+    z-index: 1;
+    animation: vanish 200ms $animation-duration;
+    animation-fill-mode: forwards;
+    
+    &::after {
+        content: "Ohmyfood";
+        color: $purple;
+        border-bottom: 4px solid $pink;
+        font-family: shrikhand;
+        font-size: 70px;
+        animation: shake $animation-duration infinite linear;
+    }
+}
+

@@ -11,6 +11,10 @@ a {
   color: black;
 }
 
+.contact {
+  color: white;
+}
+
 ul {
   list-style-type: none;
 }
@@ -27,20 +31,23 @@ body h1 {
   display: grid;
   place-items: center;
   background: #99E2D0;
-  opacity: 0.8;
+  opacity: 1;
   position: fixed;
   inset: 0;
   z-index: 1;
-  animation: vanish 200ms 3s;
+  animation: vanish 800ms 3s;
   animation-fill-mode: forwards;
 }
 .loader::after {
   content: "Ohmyfood";
   color: #9356DC;
-  border-bottom: 4px solid #FF79DA;
+  border: 4px solid #FF79DA;
+  border-radius: 50%;
+  padding: 4rem;
   font-family: shrikhand;
-  font-size: 70px;
-  animation: shake 3s infinite linear;
+  font-size: 60px;
+  animation: shake;
+  animation-duration: 8s;
 }
 
 header {
@@ -384,7 +391,7 @@ button:hover {
 
 @keyframes rotation {
   0% {
-    transform: rotate(-350deg);
+    transform: rotate(-360deg);
   }
   100% {
     transform: rotate(0);

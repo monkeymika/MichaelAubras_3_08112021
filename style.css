@@ -227,6 +227,7 @@ footer h2 {
 }
 footer p {
   padding: 0.3rem;
+  cursor: pointer;
 }
 footer div {
   display: flex;

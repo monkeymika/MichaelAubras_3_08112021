@@ -68,7 +68,7 @@ figure {
         background: linear-gradient(to bottom, #9356DC 0%, #FF79DA 85%, #FF79DA 100%); 
         opacity: 0;
         transition: 900ms ease-in;
-        background-clip: text;
+        -webkit-background-clip: text;
     }
     &:hover .fas {
         opacity: 1;

@@ -54,11 +54,16 @@ body {
         color: $purple;
         border: 4px solid $pink;
         border-radius: 50%;
-        padding: 4rem;
+        padding: 1.5rem;
         font-family: shrikhand;
         font-size: 60px;
         animation: shake ;
         animation-duration: 8s;
+
+        @media (max-width:768px) {
+            
+            font-size: 40px;
+        }
     }
 }
 

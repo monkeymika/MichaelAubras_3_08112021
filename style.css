@@ -43,11 +43,16 @@ body h1 {
   color: #9356DC;
   border: 4px solid #FF79DA;
   border-radius: 50%;
-  padding: 4rem;
+  padding: 1.5rem;
   font-family: shrikhand;
   font-size: 60px;
   animation: shake;
   animation-duration: 8s;
+}
+@media (max-width: 768px) {
+  .loader::after {
+    font-size: 40px;
+  }
 }
 
 header {
@@ -208,7 +213,6 @@ figure .fas {
   background: -moz-linear-gradient(top, #9356DC 0%, #FF79DA 85%, #FF79DA 100%);
   background: -webkit-linear-gradient(top, #9356DC 0%, #FF79DA 85%, #FF79DA 100%);
   background: linear-gradient(to bottom, #9356DC 0%, #FF79DA 85%, #FF79DA 100%);
-  background-clip: text;
   opacity: 0;
   transition: 900ms ease-in;
   -webkit-background-clip: text;
@@ -274,9 +278,9 @@ footer div {
   background: -webkit-linear-gradient(top, #9356DC 0%, #FF79DA 85%, #FF79DA 100%);
   background: linear-gradient(to bottom, #9356DC 0%, #FF79DA 85%, #FF79DA 100%);
   background-clip: text;
+  -webkit-background-clip: text;
   opacity: 0;
   transition: 900ms ease-in;
-  -webkit-background-clip: text;
 }
 .title:hover .fas {
   opacity: 1;

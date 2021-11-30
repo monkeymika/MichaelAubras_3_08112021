@@ -39,9 +39,11 @@
         background: -webkit-linear-gradient(top, #9356DC 0%, #FF79DA 85%, #FF79DA 100%);
         background: linear-gradient(to bottom, #9356DC 0%, #FF79DA 85%, #FF79DA 100%);
         background-clip: text;
+        -webkit-background-clip: text;
         opacity: 0;
         transition: 900ms ease-in;
-        -webkit-background-clip: text;
+
+        
     }
     &:hover .fas {
         opacity: 1;

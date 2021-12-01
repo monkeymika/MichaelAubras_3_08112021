@@ -102,6 +102,7 @@ header h1 {
   background: -moz-linear-gradient(top, #f37fd2 0%, #fa8cdb 39%, #a365ee 100%);
   background: -webkit-linear-gradient(top, #f37fd2 0%, #fa8cdb 39%, #a365ee 100%);
   background: linear-gradient(to bottom, #f37fd2 0%, #fa8cdb 39%, #a365ee 100%);
+  box-shadow: #5e5c5c78 2px 5px 10px 0px;
 }
 
 nav {
@@ -394,6 +395,7 @@ button:hover {
   background: -moz-linear-gradient(top, #f37fd2 0%, #fa8cdb 39%, #a365ee 100%);
   background: -webkit-linear-gradient(top, #f37fd2 0%, #fa8cdb 39%, #a365ee 100%);
   background: linear-gradient(to bottom, #f37fd2 0%, #fa8cdb 39%, #a365ee 100%);
+  box-shadow: #5e5c5c78 2px 5px 10px 0px;
 }
 
 .command {

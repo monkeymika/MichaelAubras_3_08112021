@@ -57,17 +57,18 @@ figure {
         font-size: 2rem;
         right: 1rem;
         top: 15%;
-       
     }
+    
+    /* Animation du remplissage du coeur*/
     
     .fas {
         color: transparent;
-        background: #9356DC;
         background: -moz-linear-gradient(top, #9356DC 0%, #FF79DA 85%, #FF79DA 100%);
         background: -webkit-linear-gradient(top, #9356DC 0%, #FF79DA 85%, #FF79DA 100%);
         background: linear-gradient(to bottom, #9356DC 0%, #FF79DA 85%, #FF79DA 100%); 
         opacity: 0;
         transition: 900ms ease-in;
+        background-clip: text;
         -webkit-background-clip: text;
     }
     &:hover .fas {

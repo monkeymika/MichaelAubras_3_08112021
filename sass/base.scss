@@ -1,9 +1,17 @@
+/* Réglage de base */
+
+/*Import de la police*/
+
 @import url('https://fonts.googleapis.com/css2?family=Raleway&family=Shrikhand&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Raleway&family=Roboto:wght@100;400&family=Shrikhand&display=swap');
+
+/* Couleur charte graphique*/
 
 $purple : #9356DC;
 $pink : #FF79DA;
 $green : #99E2D0;
+
+/*Reset CSS*/
 
 *
 {
@@ -27,14 +35,22 @@ ul
     list-style-type: none;
 }
 
+/*Mise en place de la police*/
+
 body {
-    p, h2, h3, h4, .price {
+    p, li, h2, h3, h4, .price {
         font-family: 'Roboto', sans-serif;
+    }
+    li {
+        font-weight: bold;
     }
     h1 {
         font-family: 'Shrikhand', cursive;
     }
 }
+
+
+/* Loading spinner pour le chargement de la page*/
 
 .loader {
     $animation-duration: 3s;
